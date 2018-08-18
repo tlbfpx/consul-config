@@ -1,0 +1,10 @@
+
+zuul:
+  routes:
+    user-service:
+      path: /user-service/**
+      #url: http://localhost:8081/datalase-seller/
+      serviceId: user-service
+
+filter:
+ ignores: /addUser,/login,/logout,/static,/user/info,/user/findAll
