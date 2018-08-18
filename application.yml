@@ -1,0 +1,76 @@
+spring:
+  datasource:
+    name: datasource
+    url: jdbc:mysql://192.168.199.113:3306/detalase?useSSL=false
+    username: dse_user
+    password: dse_user!
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+
+
+  data:
+    mongodb:
+      detalas:
+        hosts: 192.168.199.171,192.168.199.172,192.168.199.173
+        ports: 28000,28000,28000
+        username: detalase
+        password: detalase
+        authenticationDatabase: detalase
+
+
+  freemarker:
+    allow-request-override: false
+    cache: true
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: false
+    template-loader-path: classpath:templates
+  mail:
+    default-encoding: utf-8
+    host: smtp.163.com
+    password: ENC(/Ou1rL5Th2FEmQ3FFaROEV4jYdErGdQb)
+    username: 18917906746@163.com
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+
+
+redis:
+  cache:
+    clusterNodes: 192.168.199.73:7000,192.168.199.74:7000,192.168.199.74:7001,192.168.199.72:7001,192.168.199.73:7001,192.168.199.72:7000
+    commandTimeout: 500
+    expireSeconds: 1000
+    password: 111
+
+qiniu:
+  access-key: LljRgfC0Wlx7ScBAhP_g78WXTYOiuGViAiCMw76V
+  secret-key: Fw0E9Srr7rlRr5pAhPAJwaisdkFIwf6fLi91x92f
+  bucket-host: daigoutest
+  domain-name: http://7xiata.com1.z0.glb.clouddn.com
+
+
+jasypt:
+  encryptor:
+    password: ezbuy
