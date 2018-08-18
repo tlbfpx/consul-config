@@ -1,9 +1,9 @@
 spring:
   datasource:
     name: datasource
-    url: jdbc:mysql://localhost:3306/detalase?useSSL=false
-    username: root
-    password: ezbuy619!
+    url: jdbc:mysql://192.168.199.113:3306/detalase?useSSL=false
+    username: dse_user
+    password: dse_user
     # 使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
