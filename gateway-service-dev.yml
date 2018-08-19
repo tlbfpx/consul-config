@@ -7,7 +7,7 @@ management:
 zuul:
   routes:
     user-service:
-      path: /user-service/**
+      path: /api/user/**
       #url: http://localhost:8081/datalase-seller/
       serviceId: user-service
 
